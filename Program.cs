@@ -12,26 +12,23 @@ namespace CsExercise_01
         {
             int row, x = 0, y = 1;
             Console.WriteLine("Enter the number");
-            row =Convert.ToInt32(Console.ReadLine());
+            row = Convert.ToInt32(Console.ReadLine());
 
-            for(int i = 1; i <= row; i++)
+            for (int i = 1; i <= row; i++)
             {
                 y = 1;
-                for(int j = 1; j <= row + 4; j++)
+                for(int j = 1; j <= i + x; j++)
                 {
-                    if (j <= (i + x))
+                    if (j <= ((i + x) / 2))
                     {
-                        if(j <= (i + x) / 2)
-                        {
-                            Console.Write((char)(y + 64));
-                            y++;
-                        } else
-                        {
-                            Console.Write((char)(y + 64));
-                            y--;
-                        }
-                    } 
-            
+                        Console.Write((char)(y + 64));
+                        y++;
+                    }
+                    else
+                    {
+                        Console.Write((char)(y + 64));
+                        y--;
+                    }
                 }
                 x++;
                 Console.WriteLine();
